@@ -1,0 +1,130 @@
+.permissions-card {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-lg);
+  border: 2px solid var(--color-border-light);
+
+  @media (max-width: 1023px) {
+    margin-block-end: 50px;
+  }
+
+  &__text {
+    padding-block-end: var(--spacing-md);
+  }
+
+  &__link {
+    color: var(--color-text-primary);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__settings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+
+  &__setting-row {
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    align-items: flex-start;
+
+    @media (min-width: 768px) {
+      gap: 1.5rem;
+    }
+  }
+
+  &__setting-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__icon {
+    font-size: 2rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+
+    img {
+      width: 24px;
+      height: 24px;
+      display: block;
+
+      @media (min-width: 768px) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    line-height: 1.4;
+    font-size: var(--font-size-md);
+  }
+
+  &__description {
+    margin-block-start: 4px;
+    display: block;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    font-size: var(--font-size-sm);
+
+    @media (min-width: 768px) {
+      margin-block-start: 8px;
+    }
+  }
+
+  /* ----- Radix Switch Styles ----- */
+  .SwitchRoot {
+    width: 56px;
+    height: 32px;
+    background-color: var(--color-neutral);
+    border-radius: var(--radius-thumb);
+    position: relative;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .SwitchRoot[data-state="checked"] {
+    background-color: var(--color-accent);
+  }
+
+  .SwitchThumb {
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform var(--transition-fast);
+    transform: translateX(2px);
+  }
+
+  .SwitchRoot[data-state="checked"] .SwitchThumb {
+    transform: translateX(26px);
+  }
+
+  .SwitchRoot:focus-within {
+    box-shadow: var(--shadow-focus);
+  }
+
+  .question-mark-icon {
+    vertical-align: middle;
+    background: var(--color-text-primary);
+    fill: #fff;
+    color: #fff;
+    border-radius: var(--radius-sm);
+    padding: 3px;
+    width: 10px;
+    height: 10px;
+    margin-inline-start: var(--spacing-xs);
+    cursor: pointer;
+  }
+}

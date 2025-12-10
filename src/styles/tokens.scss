@@ -1,0 +1,58 @@
+@import "@radix-ui/colors/black-alpha.css";
+@import "@radix-ui/colors/mauve.css";
+
+:root {
+  --color-primary: #02b8f5;
+  --color-primary-light: #e8fafd;
+  --color-accent: #00a7d9;
+  --color-accent-bright: #06b6f3;
+
+  --color-text-primary: #000000;
+  --color-text-secondary: #86aebd;
+  --color-text-muted: #9bb8cd;
+  --color-text-subtle: var(--mauve-11);
+
+  --color-bg-card: #ffffff;
+  --color-bg-light: #f5fafa;
+
+  --color-neutral: #d1d1d1;
+  --color-border-light: #f5fafa;
+
+  --radius-sm: 10px;
+  --radius-md: 20px;
+
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
+  --spacing-3xl: 100px;
+
+  --shadow-testimonial: 0 0 90px 0 rgba(133, 174, 187, 0.7);
+  --shadow-focus: 0 0 0 1px var(--mauve-12);
+
+  --font-family: "Poppins", sans-serif;
+  --default-font-family: "Poppins", sans-serif;
+  --font-size-sm: 16px;
+  --font-size-md: 20px;
+  --font-size-lg: 25px;
+  --font-size-title: 28px;
+  --line-height-base: 1.8;
+  --line-height-title: 1.4;
+
+  --transition-fast: 0.25s;
+  --transition-base: 300ms;
+  --transition-ease: cubic-bezier(0.87, 0, 0.13, 1);
+
+  --container-max-width: 1200px;
+}
+
+.radix-themes {
+  --default-font-family: "Poppins", sans-serif;
+  --default-font-size: 18px;
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --font-size-title: 48px;
+  }
+}

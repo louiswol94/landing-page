@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--default-font-size);
+}
+
+.freemius-title {
+  font-size: var(--font-size-title);
+  line-height: var(--line-height-title);
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 1023px) {
+  .center-text-on-mobile {
+    text-align: center;
+  }
+}

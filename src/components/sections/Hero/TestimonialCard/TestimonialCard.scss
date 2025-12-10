@@ -1,0 +1,46 @@
+.testimonials-card {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-testimonial);
+
+  &__image {
+    max-width: 95px;
+    max-height: 95px;
+    object-fit: cover;
+    border-radius: 50%;
+    inset-block-start: 7px;
+    position: relative;
+  }
+
+  &__quote {
+    max-width: 40px;
+
+    &-container {
+      position: relative;
+      inset-block-start: 25px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: var(--default-font-size);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    line-height: var(--line-height-base);
+  }
+
+  &__name {
+    font-size: var(--default-font-size);
+    color: var(--color-accent-bright);
+    font-weight: 500;
+    margin-block-start: var(--spacing-sm);
+  }
+
+  &__company {
+    font-size: var(--default-font-size);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin-block-start: var(--spacing-xs);
+  }
+}

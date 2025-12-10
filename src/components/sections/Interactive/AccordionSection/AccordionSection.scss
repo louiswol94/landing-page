@@ -1,0 +1,104 @@
+/* ----- Radix Accordion Styles ----- */
+
+/* reset */
+button,
+h3 {
+  all: unset;
+}
+
+.AccordionRoot {
+  width: 100%;
+}
+
+.AccordionItem {
+  overflow: hidden;
+  margin-top: var(--spacing-lg);
+  border-radius: var(--radius-sm);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:focus-within {
+    position: relative;
+    z-index: 1;
+    box-shadow: var(--shadow-focus);
+  }
+
+  &.disabled {
+    opacity: 0.2;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}
+
+.AccordionHeader {
+  display: flex;
+}
+
+.AccordionTrigger {
+  font-family: inherit;
+  padding: 25px;
+  height: 45px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  background-color: var(--color-bg-light);
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  &[data-state="open"] {
+    color: var(--color-primary);
+
+    > .AccordionChevron {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.AccordionContent {
+  overflow: hidden;
+  color: var(--color-text-subtle);
+  background-color: var(--color-bg-light);
+
+  &[data-state="open"] {
+    animation: slideDown var(--transition-base) var(--transition-ease);
+  }
+
+  &[data-state="closed"] {
+    animation: slideUp var(--transition-base) var(--transition-ease);
+  }
+}
+
+.AccordionContentText {
+  padding: 0px 25px 25px 25px;
+  font-size: var(--default-font-size);
+}
+
+.AccordionChevron {
+  transition: transform var(--transition-base) var(--transition-ease);
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}

@@ -1,0 +1,11 @@
+.container {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  width: 90%;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 100%;
+  }
+}
